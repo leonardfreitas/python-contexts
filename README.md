@@ -35,6 +35,8 @@ python-contexts/
     api-drf/          → Django + Django REST Framework API context
     (more contexts may be added here over time, e.g. a Celery-worker-only
     context, or an admin-only Django project context)
+  aws-lambda/
+    lambda-api/       → REST API on AWS Lambda (FastAPI + Mangum + SAM) context
 ```
 
 Each context folder is self-contained: it has its own `README.md` with
@@ -45,6 +47,7 @@ installation instructions, and can be adopted independently of the others.
 | Context | Path | Description |
 |---|---|---|
 | Django + DRF API | [`django/api-drf`](./django/api-drf) | Layered architecture (view/serializer/service/model), domain exceptions, transactions, testing pyramid, deployment, permissions |
+| AWS Lambda API | [`aws-lambda/lambda-api`](./aws-lambda/lambda-api) | REST API on AWS Lambda with FastAPI + Mangum + SAM, one-Lambda-per-bounded-context, SQL/DynamoDB data-access patterns, testing, deploy |
 
 ## How to use a context
 
