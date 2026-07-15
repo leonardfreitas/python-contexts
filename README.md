@@ -38,6 +38,8 @@ python-contexts/
   aws-lambda/
     lambda-api/       → REST API on AWS Lambda (FastAPI + Mangum + SAM) context
     lambda-sqs-worker/ → Async SQS-consumer worker on AWS Lambda (SAM) context
+  cli/
+    typer-rich/       → Command-line tool (Typer + Rich) context
 ```
 
 Each context folder is self-contained: it has its own `README.md` with
@@ -50,6 +52,7 @@ installation instructions, and can be adopted independently of the others.
 | Django + DRF API | [`django/api-drf`](./django/api-drf) | Layered architecture (view/serializer/service/model), domain exceptions, transactions, testing pyramid, deployment, permissions |
 | AWS Lambda API | [`aws-lambda/lambda-api`](./aws-lambda/lambda-api) | REST API on AWS Lambda with FastAPI + Mangum + SAM, one-Lambda-per-bounded-context, SQL/DynamoDB data-access patterns, testing, deploy |
 | AWS Lambda SQS Worker | [`aws-lambda/lambda-sqs-worker`](./aws-lambda/lambda-sqs-worker) | Async message-processing worker on AWS Lambda consuming SQS with SAM, batch processing, idempotency, error handling, SQL/DynamoDB data-access patterns |
+| CLI (Typer + Rich) | [`cli/typer-rich`](./cli/typer-rich) | Command-line tools with Typer and Rich, command structure, output formatting, interactive prompts, user config, error handling, testing |
 
 ## How to use a context
 
